@@ -1,0 +1,22 @@
+body {
+    background-color: #818282;
+    text-align: center;
+}
+
+.all {
+    display: inline-block;
+    background-color: #909090;
+    border: opacity 0.5;
+    border-radius: 10px 10px;
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
+}
+
+.top {
+    display: inline-block;
+    background-color: #909090;
+    width: 1200px;;
+    border: opacity 0.5;
+    border-radius: 10px 10px;
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
+    height: 125px;
+}
