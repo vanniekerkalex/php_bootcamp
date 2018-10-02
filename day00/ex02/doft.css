@@ -1,22 +1,53 @@
 body {
-    background-color: #818282;
-    text-align: center;
+    background-color: #505050;
+	text-align: center;
+	align-content: center;
 }
 
-.all {
-    display: inline-block;
+.sides {
+    display: block;
     background-color: #909090;
     border: opacity 0.5;
     border-radius: 10px 10px;
-    box-shadow: 10px 10px rgba(0,0,0,0.5);
+	box-shadow: 10px 10px 5px;
+	align-content: center;
+	width: 10%;
+	height: 360px;
+	margin: 20px;
+	margin-top: 0;
+	margin-bottom: auto;
+}
+
+.middle {
+    display: block;
+    background-color: #909090;
+    border: opacity 0.5;
+    border-radius: 10px 10px;
+	box-shadow: 10px 10px 5px;
+	margin: 10px;
+	margin-top:0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 72%;
+	/* vertical-align: -webkit-baseline-top; */
 }
 
 .top {
     display: inline-block;
     background-color: #909090;
-    width: 1200px;;
+    width: 1200px;
     border: opacity 0.5;
     border-radius: 10px 10px;
-    box-shadow: 10px 10px rgba(0,0,0,0.5);
-    height: 125px;
+    box-shadow: 10px 10px 5px;
+	height: 125px;
+	margin-bottom: 0;
+}
+
+.brick {
+	background-image: url("./resources/brick.jpg");
+	margin-left: auto; 
+	margin-right: auto;
+	margin-top: 5px; 
+	width: 85%; 
+	height: 17.5%;
 }
