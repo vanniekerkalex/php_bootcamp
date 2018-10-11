@@ -2,30 +2,21 @@
 
 class NightsWatch
 {
-	interface IFighter
+	private $fighters = array();
+
+	function recruit ($p)
 	{
-		public function recruit ($p)
-		{
-			if ($p instanceof JonSnow)
-				$this->fight();
-			if ($p instanceof SamwellTarly)
-				$this->fight();
-
-		}
-		public function fight() {
-		}
-		public function isABastard() {
-			return False;
-		}
-		public function sendRavens() {
-		}
-		public function makeHisFatherProud() {
-			return False;
-		}
+		$this->$fighters[] = $p;
 	}
-	
 
+	function fight() 
+	{
+		foreach ($this->$fighters as $p)
+		{
+			if (method_exists($p, 'fight'))
+				$p->fight();
+		}
+	}	
 }
-
 
 ?>
