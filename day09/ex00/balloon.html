@@ -1,0 +1,73 @@
+<html>
+
+<head>
+	<title>Day09 - Ex00</title>
+	<style>
+		body {
+		
+		}
+
+		h1 {
+			
+		}
+
+		div {
+			background-color: red;
+			width: 200px;
+			height: 200px;
+			border-radius: 100px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="balloon" onclick="myBalloon()" onmouseout="startShrink()">
+		
+	</div>
+
+	<h1 id="size"></h1>
+</body>
+
+</html>
+
+<script>
+	var size = 200;
+	var color = 99999;
+	
+	//document.getElementById("size").innerHTML = size + "px";
+
+	function myBalloon() {
+		if (size >= 420)
+			size = 190;
+		
+		size += 10;
+		color ++;
+		
+		change();
+	}
+
+	function startShrink() {
+		if (size > 200)
+			size -= 5;
+	
+		color--;
+		change();
+	}
+
+	function change() {
+		
+		document.getElementById('balloon').style.height = size + 'px';
+		document.getElementById('balloon').style.width = size + 'px';
+		document.getElementById('balloon').style.borderRadius = size / 2 + 'px';
+
+		if (color % 3 == 0)
+			document.getElementById('balloon').style.backgroundColor = 'red';
+		else if (color % 3 == 1)
+			document.getElementById('balloon').style.backgroundColor = 'green';
+		else if (color % 3 == 2)
+			document.getElementById('balloon').style.backgroundColor = 'blue';
+
+		//document.getElementById("size").innerHTML = size + "px";
+	}
+	
+</script>
