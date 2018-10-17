@@ -1,0 +1,93 @@
+<html>
+
+<head>
+	<title>Day09 - Ex00</title>
+	<style>
+		body {
+			background-color: grey;
+			text-align: center;
+		}
+
+		h1 {
+
+		}
+
+		div {
+	
+		}
+
+		#heading {
+			margin: 30px;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<h1 id="heading">Calculator</h1>
+	</div>
+
+	<div>
+		<form>
+				<input type="text" id="lnum">
+				<select id="x">
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="x">x</option>
+					<option value="/">/</option>
+					<option value="%">%</option>
+				</select>
+				<input type="text" id="rnum" value="">
+				<input type="submit" onclick="calc()" value="Try me!">
+		</form>
+	</div>
+</body>
+
+</html>
+
+<script>
+	
+	setInterval(alertFunc, 30000);
+	function alertFunc() {
+		window.alert("Please, use me...");
+	}
+
+	function calc() {
+
+		var lnum = document.getElementById("lnum").value;
+		var rnum = document.getElementById("rnum").value;
+		var x = document.getElementById("x").value;
+		var ans = 0;
+
+		if (rnum < 0 || lnum < 0) {
+			window.alert("Error :(");
+		} else {
+				if ((x == '%' || x == '/') && (rnum == 0)) {
+					console.log("It’s over 9000!");
+					window.alert("It’s over 9000!");
+				} else if (x == '+') {
+					ans = parseFloat(lnum) + parseFloat(rnum);
+					console.log(ans);
+					window.alert(ans);
+				} else if (x == '-') {
+					ans = parseFloat(lnum) - parseFloat(rnum);
+					console.log(ans);
+					window.alert(ans);
+				} else if (x == 'x') {
+					ans = parseFloat(lnum) * parseFloat(rnum);
+					console.log(ans);
+					window.alert(ans);
+				} else if (x == '/') {
+					ans = parseFloat(lnum) / parseFloat(rnum);
+					console.log(ans);
+					window.alert(ans);
+				} else if (x == '%') {
+					ans = parseFloat(lnum) % parseFloat(rnum);
+					console.log(ans);
+					window.alert(ans);
+				}
+			}
+		
+	}
+
+</script>
